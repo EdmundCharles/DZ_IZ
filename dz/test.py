@@ -1,3 +1,16 @@
-x= 'a b c c c c c v v v b b b n n n n v c c c b f d c c c c c c c'
-m = x.split(" ")
-print(m)
+def armstr(x) :
+    x = str(x)
+    s = []
+    for i in x :
+        s.append(i)
+    s = list(map(int, s))
+    sum = 0
+    for i in s :
+        sum += i*len(x)
+    print(sum)
+armstr(1234)
+
+
+
+x = '1234'
+print(len(x))

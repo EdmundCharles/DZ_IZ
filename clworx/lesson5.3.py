@@ -1,10 +1,21 @@
 import math
-a = 2
-b = 4
-r = 2
 count = 0
-def proverka(x,y) :
-    if math.sqrt((a-x)**2+(b-y)**2) < r :
-        print(x,y)
-p1 , p2 = 1  , 4
-for i in 
+p = [1, 200]
+f = [3, 4]
+l = [5, 7]
+tochkiez = [p, f, l]
+a, b, r = 2, 3, 5
+
+
+def check(list):
+    global count
+    if math.sqrt((a-list[0])**2 + (b - list[1])**2) <= r:
+        print(f'{list}, inside')
+        count += 1
+    else:
+        print(f'{list}, outside')
+
+
+for i in tochkiez:
+    check(i)
+print(count)
