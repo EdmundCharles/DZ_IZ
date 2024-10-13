@@ -1,16 +1,8 @@
-def armstr(x) :
-    x = str(x)
-    s = []
-    for i in x :
-        s.append(i)
-    s = list(map(int, s))
-    sum = 0
-    for i in s :
-        sum += i*len(x)
-    print(sum)
-armstr(1234)
-
-
-
-x = '1234'
-print(len(x))
+n = 2
+lst = []
+for i in range(3,100) :
+    while i%n !=0:
+        n+=1
+    if n == i :
+        lst.append(i)
+print(lst)
