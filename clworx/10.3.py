@@ -36,3 +36,12 @@ dt = {
 df = pd.DataFrame(data=dt)
 df.set_index(["gender", 'class'], inplace=True)
 
+grouped = df.groupby(['mark']).size()
+
+plt.bar(grouped.index,grouped.values,color='blue')
+plt.xlabel('Marks')
+plt.ylabel('Number of students')
+plt.title('Marks distribution')
+plt.grid(axis='y',linestyle='--',alpha=0.5)
+plt.tight_layout()
+plt.show()
