@@ -6,10 +6,9 @@ def is_number(z):
         return False
 
 
-x, y, * \
-    m = input(
-        "Введите два числа, которые необходимо поделить, через пробел \n").split()
-if len(m) == 0:
+x, y = input("Введите два числа, которые необходимо поделить, через пробел \n").split()
+m = [x,y]
+if len(m) == 2:
     if is_number(x) and is_number(y):
         if float(y) == 0:
             print("На ноль делить нельзя")
